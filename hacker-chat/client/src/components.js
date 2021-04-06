@@ -10,13 +10,13 @@ export default class ComponentsBuilder{
 
 
     #baseComponent() {
-         return{
+         return {
              border: 'line',
              mouse: true,
              keys: true,
              top: 0,
              scrollboar: {
-                 ch: '',
+                 ch: ' ',
                  inverse:  true
              },
              //Habilita colocar cores e tags no texto
@@ -56,7 +56,7 @@ export default class ComponentsBuilder{
                 left: 2
             },
             style: {
-                fg: '#F6f6f6',
+                fg: '#f6f6f6',
                 bg: '#353535'
             }
         })
@@ -74,7 +74,7 @@ export default class ComponentsBuilder{
             align: 'left',
             width: '50%',
             height: '90%',
-            itens: ['{bold}Messenger{/}']
+            items: ['{bold}Messenger{/}']
 
         })
 
@@ -84,7 +84,8 @@ export default class ComponentsBuilder{
     build() {
         const components = {
             screen: this.#screen,
-            input: this.#input
+            input: this.#input,
+            chat: this.#chat
         }
 
         return components
